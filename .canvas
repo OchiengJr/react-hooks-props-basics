@@ -1,6 +1,40 @@
----
-:lessons:
-- :id: 250547
-  :course_id: 6667
-  :canvas_url: https://learning.flatironschool.com/courses/6667/pages/props-basics
-  :type: page
+import React from "react";
+
+const lessonsData = [
+  {
+    id: 250547,
+    course_id: 6667,
+    canvas_url: "https://learning.flatironschool.com/courses/6667/pages/props-basics",
+    type: "page",
+  },
+  {
+    id: 296587,
+    course_id: 7553,
+    canvas_url: "https://learning.flatironschool.com/courses/7553/pages/props-basics",
+    type: "page",
+  },
+];
+
+function LessonsList() {
+  return (
+    <div>
+      <h2>Lessons</h2>
+      <ul>
+        {lessonsData.map((lesson) => (
+          <li key={lesson.id}>
+            <strong>Lesson ID:</strong> {lesson.id} <br />
+            <strong>Course ID:</strong> {lesson.course_id} <br />
+            <strong>Type:</strong> {lesson.type} <br />
+            <a href={lesson.canvas_url} target="_blank" rel="noopener noreferrer">
+              Go to Lesson
+            </a>
+            <hr />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default LessonsList;
+
