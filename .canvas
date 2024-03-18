@@ -18,6 +18,7 @@ const lessonsData = [
 function LessonsList() {
   return (
     <div>
+      <h1>Lesson List
       <h2>Lessons</h2>
       <ul>
         {lessonsData.map((lesson) => (

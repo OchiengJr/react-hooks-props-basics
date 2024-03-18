@@ -1,19 +1,32 @@
+/* Global Styles */
 body {
   font-family: sans-serif;
 }
 
-#blog-post {
+/* Blog Post Styles */
+.blog-post {
   margin: 40px auto;
   border-radius: 15px;
-  width: 500px;
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Maximum width */
   background-color: rgb(84, 78, 238);
   padding: 30px;
 }
 
+/* Comment Styles */
 .comment {
   background-color: rgb(67, 215, 58);
   margin: 10px;
-  padding: 5px;
+  padding: 10px; /* Increased padding for better readability */
   border-radius: 5px;
-  display: inline-flex;
+  display: flex; /* Changed to flex for better alignment */
+  align-items: center; /* Center vertically */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .blog-post {
+    width: 95%; /* Adjust width for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
 }
